@@ -1,10 +1,12 @@
 package com.app40.listview_20220116.adapters
 
 import android.content.Context
+import android.inputmethodservice.Keyboard
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
+import android.widget.TextView
 import com.app40.listview_20220116.R
 import com.app40.listview_20220116.datas.StudentData
 
@@ -21,9 +23,21 @@ class StudentAdapter(
             tempRow = LayoutInflater.from(mContext).inflate(R.layout.student_list_item, null)
 
         }
-        val Row = tempRow!!
+        val row = tempRow!!
 
-        return Row
+        val data = mList[position]
+
+        val txtStudentName = row.findViewById<TextView>(R.id.txtStudentName)
+        val txtAge = row.findViewById<TextView>(R.id.txtAge)
+        val txtAddress = row.findViewById<TextView>(R.id.txtAddress)
+
+        txtStudentName.text = data.name
+        txtAddress.text = data.address
+        
+        val age = 2022 -data.birthYear + 1
+        txtAge.text = "(${age}세)"
+
+        return row
 
     }
 }
