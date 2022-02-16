@@ -18,6 +18,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+//        실제 데이터를 어레이리스트에 추가
+
         mStudentList.add( StudentData("조경진",1988,"서울시 동대문구"))
         mStudentList.add( StudentData("고재천",1988,"서울시 중랑구"))
         mStudentList.add( StudentData("방우진",1983,"서울시 고양시"))
