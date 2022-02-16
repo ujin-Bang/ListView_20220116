@@ -11,6 +11,7 @@ import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
+//    테스트용 주석입니다
     lateinit var mAdapter: StudentAdapter
     val mStudentList = ArrayList<StudentData>()
 
@@ -46,7 +47,7 @@ class MainActivity : AppCompatActivity() {
 
            val alert = AlertDialog.Builder(this)
                 .setTitle("학생 삭제")
-                .setMessage("정말 ${ longClickedStudent}학생을 삭제하시겠습니까?")
+                .setMessage("정말 ${ longClickedStudent.name}학생을 삭제하시겠습니까?")
                 .setPositiveButton("확인", DialogInterface.OnClickListener { dialogInterface, i ->
 
                     mStudentList.remove(longClickedStudent)
