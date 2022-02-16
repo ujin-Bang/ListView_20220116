@@ -21,6 +21,9 @@ class StudentAdapter(
             tempRow = LayoutInflater.from(mContext).inflate(R.layout.student_list_item, null)
 
         }
+        val Row = tempRow!!
+
+        return Row
 
     }
 }
